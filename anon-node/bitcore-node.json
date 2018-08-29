@@ -1,0 +1,18 @@
+{
+  "network": "testnet",
+  "port": 3001,
+  "services": [
+    "bitcoind",
+    "insight-api-zclassic",
+    "insight-ui-anon",
+    "web"
+  ],
+  "servicesConfig": {
+    "bitcoind": {
+      "spawn": {
+        "datadir": "./data",
+        "exec": "/Users/kevinvanderpoll/bitcore-node-anon/bin/anond"
+      }
+    }
+  }
+}
