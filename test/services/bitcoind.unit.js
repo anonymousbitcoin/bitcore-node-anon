@@ -6,7 +6,7 @@ var path = require('path');
 var EventEmitter = require('events').EventEmitter;
 var should = require('chai').should();
 var crypto = require('crypto');
-var bitcore = require('bitcore-lib-btcp');
+var bitcore = require('bitcore-lib-anon-latest');
 var _ = bitcore.deps._;
 var sinon = require('sinon');
 var proxyquire = require('proxyquire');
@@ -369,7 +369,7 @@ describe('Bitcoin Service', function() {
         }
       });
       var bitcoind = new TestBitcoin(baseConfig);
-      bitcoind.options.spawn.datadir = '/tmp/.btcprivate';
+      bitcoind.options.spawn.datadir = '/tmp/.anon';
       var node = {};
       bitcoind._loadSpawnConfiguration(node);
       should.exist(bitcoind.spawn.config);
@@ -466,7 +466,7 @@ describe('Bitcoin Service', function() {
         }
       };
       var bitcoind = new TestBitcoin(config);
-      bitcoind.options.spawn.datadir = '/tmp/.btcprivate';
+      bitcoind.options.spawn.datadir = '/tmp/.anon';
       var node = {};
       bitcoind._loadSpawnConfiguration(node);
     });

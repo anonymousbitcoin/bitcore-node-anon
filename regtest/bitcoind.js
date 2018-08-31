@@ -7,7 +7,7 @@ var index = require('..');
 var log = index.log;
 
 var chai = require('chai');
-var bitcore = require('bitcore-lib-btcp');
+var bitcore = require('bitcore-lib-anon-latest');
 var BN = bitcore.crypto.BN;
 var async = require('async');
 var rimraf = require('rimraf');
@@ -26,7 +26,7 @@ var coinbasePrivateKey;
 var privateKey = bitcore.PrivateKey();
 var destKey = bitcore.PrivateKey();
 
-describe('btcpd Functionality', function() {
+describe('anond Functionality', function() {
 
   before(function(done) {
     this.timeout(60000);
@@ -46,7 +46,7 @@ describe('btcpd Functionality', function() {
       bitcoind = require('../').services.Bitcoin({
         spawn: {
           datadir: datadir,
-          exec: path.resolve(__dirname, '../bin/btcpd')
+          exec: path.resolve(__dirname, '../bin/anond')
         },
         node: {
           network: regtestNetwork,
@@ -63,7 +63,7 @@ describe('btcpd Functionality', function() {
       log.info('Waiting for btcp to initialize...');
 
       bitcoind.start(function() {
-        log.info('btcpd started');
+        log.info('anond started');
 
         client = new BitcoinRPC({
           protocol: 'http',
