@@ -1,0 +1,18 @@
+{
+  "network": "testnet",
+  "port": 3001,
+  "services": [
+    "bitcoind",
+    "insight-api-btcp",
+    "insight-ui-btcp",
+    "web"
+  ],
+  "servicesConfig": {
+    "bitcoind": {
+      "spawn": {
+        "datadir": "./data",
+        "exec": "/Users/christopherarguello/Developer/anon2/Bitcore/btcp/bitcore-node-btcp/bin/anond"
+      }
+    }
+  }
+}
