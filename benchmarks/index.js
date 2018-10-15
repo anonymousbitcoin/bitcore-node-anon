@@ -5,7 +5,7 @@ var bitcoin = require('bitcoin');
 var async = require('async');
 var maxTime = 20;
 
-console.log('btcp Service native interface vs. btcp JSON RPC interface');
+console.log('Anon Service native interface vs. Anon JSON RPC interface');
 console.log('----------------------------------------------------------------------');
 
 // To run the benchmarks a fully synced Bitcore Core directory is needed. The RPC comands
@@ -43,12 +43,12 @@ bitcoind.start(function(err) {
   if (err) {
     throw err;
   }
-  console.log('btcp started');
+  console.log('Anon started');
 });
 
 bitcoind.on('ready', function() {
 
-  console.log('btcp ready');
+  console.log('Anon ready');
 
   var client = new bitcoin.Client({
     host: 'localhost',

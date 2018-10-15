@@ -423,7 +423,7 @@ describe('Bitcoin Service', function() {
     it('should throw an exception if txindex isn\'t enabled in the configuration', function() {
       var TestBitcoin = proxyquire('../../lib/services/bitcoind', {
         fs: {
-          readFileSync: sinon.stub().returns(fs.readFileSync(__dirname + '/../data/badzcash.conf')),
+          readFileSync: sinon.stub().returns(fs.readFileSync(__dirname + '/../data/badanon.conf')),
           existsSync: sinon.stub().returns(true),
         },
         mkdirp: {
