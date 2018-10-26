@@ -60,7 +60,7 @@ describe('anond Functionality', function() {
         log.error('error="%s"', err.message);
       });
 
-      log.info('Waiting for btcp to initialize...');
+      log.info('Waiting for anon to initialize...');
 
       bitcoind.start(function() {
         log.info('anond started');

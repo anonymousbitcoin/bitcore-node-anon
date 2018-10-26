@@ -2,7 +2,7 @@
   "name": "bitcore-node-anon",
   "description": "Full node with extended capabilities using Bitcore and anon",
   "author": "BitPay <dev@bitpay.com>",
-  "version": "3.1.2",
+  "version": "1.0.0",
   "main": "./index.js",
   "repository": "git://github.com/anonymousbitcoin/bitcore-node-anon.git",
   "homepage": "https://github.com/anonymousbitcoin/bitcore-node-anon",
@@ -41,8 +41,8 @@
     "coveralls": "./node_modules/.bin/istanbul cover ./node_modules/mocha/bin/_mocha --report lcovonly -- --recursive -R spec && cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js"
   },
   "tags": [
-    "btcp",
-    "btcpd"
+    "anon",
+    "anond"
   ],
   "dependencies": {
     "async": "^1.3.0",
@@ -69,7 +69,7 @@
   },
   "devDependencies": {
     "benchmark": "1.0.0",
-    "bitcore-p2p-anon": "git://github.com/anonymousbitcoin/bitcore-p2p-anon.git",
+    "bitcore-p2p-anon": "^1.0.0",
     "chai": "^3.5.0",
     "coveralls": "^2.11.9",
     "istanbul": "^0.4.3",

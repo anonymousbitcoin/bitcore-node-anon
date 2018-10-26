@@ -6,7 +6,7 @@ var path = require('path');
 var index = require('..');
 var log = index.log;
 
-var p2p = require('bitcore-p2p-btcp');
+var p2p = require('bitcore-p2p-anon');
 var Peer = p2p.Peer;
 var Messages = p2p.Messages;
 var chai = require('chai');
@@ -52,7 +52,7 @@ describe('P2P Functionality', function() {
       bitcoind = require('../').services.Bitcoin({
         spawn: {
           datadir: datadir,
-          exec: path.resolve(__dirname, '../bin/btcpd')
+          exec: path.resolve(__dirname, '../bin/anond')
         },
         node: {
           network: bitcore.Networks.testnet
@@ -63,13 +63,13 @@ describe('P2P Functionality', function() {
         log.error('error="%s"', err.message);
       });
 
-      log.info('Waiting for btcp to initialize...');
+      log.info('Waiting for anon to initialize...');
 
       bitcoind.start(function(err) {
         if (err) {
           throw err;
         }
-        log.info('btcpd started');
+        log.info('anond started');
 
         client = new BitcoinRPC({
           protocol: 'http',
