@@ -6,7 +6,7 @@ A Bitcoin full node for building applications and services with Node.js. A node 
 ## Install
 
 ```bash
-npm install -g bitcore-node
+npm install -g bitcore-node-anon
 bitcore-node start
 ```
 
