@@ -59,8 +59,8 @@ We now will setup symlinks in `bitcore-node` *(repeat this for any other modules
 cd node_modules
 rm -rf bitcore-lib
 ln -s ~/bitcore-lib
-rm -rf bitcoind-rpc
-ln -s ~/bitcoind-rpc
+rm -rf bitcoind-rpc-anon
+ln -s ~/bitcoind-rpc-anon
 ```
 
 And if you're compiling or developing bitcoin:
